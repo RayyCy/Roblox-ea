@@ -1,21 +1,187 @@
-local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-function MBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
-
-data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
-
-
- 
-
-
  
 local autofarm = game.Players.LocalPlayer.Character.HumanoidRootPart
 
-local Library = loadstring(Game:HttpGet(MBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('TpOkIqDlABJUREEwGtRjjmKtJzvsDUmHNLhGFzXtdVBhUDvvVxytHSRaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2Jsb29kYmFsbC8tYmFjay11cHMtZm9yLWxpYnMvbWFpbi93aXphcmQ=')))()
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
  
 -- Window or baseplate Make tab or section
 
-local Window = Library:NewWindow(MBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('EpkLSgAxxeHLsQQkMTKUyYUOiNUSLvXJouNdQvhSfEyHZNpyxDnuuOiRXhwZWRpdGlvbiBBbnRhcnRpY2E='))
+local Window = Library:NewWindow("Expedition Antartica")
  
--- Section - Section Usefull you donMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('FhDayBRyooOSnJbVoQwxMiZNAWdVcmGaHwlMVCSUGqTTABWsUomFVKsdCB3YW50IG9rPw0KDQpsb2NhbCBTZWN0aW9uID0gV2luZG93Ok5ld1NlY3Rpb24o')MainMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('cRhsEernEspvcnoGjhoKXBsLoCLRriYfXtqYbiCUnoWWEFumJyxLQwYKQ0KDQpTZWN0aW9uOkNyZWF0ZUJ1dHRvbig=')Get All BadgesMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('oMuVVsVNCYDIurSNLXsjtZxOXBgGUQagLczzgFTSWcnamgBiCVVQokQLCBmdW5jdGlvbigpDQpwcmludCg=')ClickedMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('BJLBNBcgOXMzHApEUKMPbMnOngUMYmPQoDjAIemXGlZVyDiCNHeTiyRKQ0KZW5kKQ0KIA0KU2VjdGlvbjpDcmVhdGVCdXR0b24o')Infinite YieldMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('ImVtNJkfKjwSNxTsSZiWYIoCqOdiutBdgapAboiMJwiQMCKqhqCleJCLCBmdW5jdGlvbigpDQpsb2Fkc3RyaW5nKGdhbWU6SHR0cEdldCg=')https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/sourceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('XySpLHoZfTNqNxmTeSdsjENmGfzEHMXArcPbybIWOkYLAAQEMCyKsunKSkoKQ0Kd2FpdCg1KQ0KZW5kKQ0KIA0KDQpTZWN0aW9uOkNyZWF0ZVRvZ2dsZSg=')Auto Win (15 Mins)MBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('VvdjzCGrVhUFBQNBeVUwZXdwpwcyeEzzDLszrtmApmNCgxtdgKMPIihLCBmdW5jdGlvbih2YWx1ZSkNCl9HLmF1dG9mYXJtID0gdmFsdWUNCndoaWxlIF9HLmF1dG9mYXJtID09IHRydWUgZG8NCndhaXQoNSkNCi0tIEJhc2VjYW1wDQpwcmludCg=')StartingMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('NOpRGJCldaobOrPBLNSVeaKIWuMcUWZpqytvxStNJuqmuVUOErlpmfnKQ0Kd2FpdCgwLjUpDQogICAgbG9jYWwgdHdlZW5JbmZvID0gVHdlZW5JbmZvLm5ldygyKQ0KICAgIGxvY2FsIGdvYWwgPSB7Q0ZyYW1lID0gQ0ZyYW1lLm5ldygtNTkxOCwgLTE1OSwgLTUpfQ0KICAgIGxvY2FsIHR3ZWVuID0gZ2FtZTpHZXRTZXJ2aWNlKA==')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('dDpPIYNRtkLmYPEVlLnPSvjhsexTjsEYlIBDLhxUyHOZWALRFbXjszRKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDQwKQ0KbG9jYWwgdHdlZW5JbmZvID0gVHdlZW5JbmZvLm5ldygyKQ0KICAgIGxvY2FsIGdvYWwgPSB7Q0ZyYW1lID0gQ0ZyYW1lLm5ldygtNDg1OCwgLTExNywgNDcpfQ0KICAgIGxvY2FsIHR3ZWVuID0gZ2FtZTpHZXRTZXJ2aWNlKA==')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('ZvGgDdJelmVCdRMnKZbgvigehbouQnHUTuwyUaMVkKYurXKSMbvGXtXKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDQwKQ0KIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoLTM3MjAsIDIyNSwgMjM1KX0NCiAgICBsb2NhbCB0d2VlbiA9IGdhbWU6R2V0U2VydmljZSg=')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('DfKgmmOvnJsYGTwubNaYUgWeGYArevxnysYCZLqEykzYtbQyVfKzYnYKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDUwKQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoLTMxODcsIDM2NSwgMTI4KX0NCiAgICBsb2NhbCB0d2VlbiA9IGdhbWU6R2V0U2VydmljZSg=')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('yNUVGEKDXzsNeFtyZEWJjKaRqVKmBqaqJbBMseWLSWGDNztWUPzwmLKKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDUwKQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoLTIyOTAsIDEwMiwgLTY1KX0NCiAgICBsb2NhbCB0d2VlbiA9IGdhbWU6R2V0U2VydmljZSg=')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('RJMzleGBxqNGWwZQMeYkArHPaYdoSHIXdZhiwYMeFBbQfqQFtAgVvFZKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQp3YWl0KDcwKQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoLTIyNzUsIDEwMSwgLTcyKX0NCiAgICBsb2NhbCB0d2VlbiA9IGdhbWU6R2V0U2VydmljZSg=')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('lSYVvZUMZDWLCfBgaKWdIaAYcnYNNoIrnXRhWKNEzgNrXJChertARAHKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDUwKQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoNzY1LCA2NSwgLTE3Nyl9DQogICAgbG9jYWwgdHdlZW4gPSBnYW1lOkdldFNlcnZpY2Uo')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('wNqEhtPRjSXpvrgCMjpAFjExVCLtoNMpvKSBdOXRfWoZKehGDXLGjTfKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDcwKQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoMTc4OCwgMTA1LCAtMTM3KX0NCiAgICBsb2NhbCB0d2VlbiA9IGdhbWU6R2V0U2VydmljZSg=')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('znLLhpXGOprjxbatOhhWbPYrOGdWCHRtcfwBMijwNbWVwCTLzxaXzMpKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDcwKQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoMzEwNSwgODQ2LCAtMTkwKX0NCiAgICBsb2NhbCB0d2VlbiA9IGdhbWU6R2V0U2VydmljZSg=')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('qMqOseKwwvkYiXBSKzarjLQbhUdkZKqbiehDuCsYdpmvxoyQdEsfapGKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDgwKQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoMzcyMSwgMTUwOCwgLTE3OCl9DQogICAgbG9jYWwgdHdlZW4gPSBnYW1lOkdldFNlcnZpY2Uo')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('fElqDRxhGKBtjsgZqawIZqDKmBzrlaGcuJHajVXwAZPlyDzdWehKQOyKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDgwKQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoNTEzNywgODM3LCAtMTg5KX0NCiAgICBsb2NhbCB0d2VlbiA9IGdhbWU6R2V0U2VydmljZSg=')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('PjauRTYtirthhSvCKtZKaXnrYsgSifQGDSYeTCxkAaTuboGMQLllZslKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDkwKQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoNTg5MiwgMzIxLCAtMjApfQ0KICAgIGxvY2FsIHR3ZWVuID0gZ2FtZTpHZXRTZXJ2aWNlKA==')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('dPhuaSyhtfREKcPnzVcrOqKyXRIuFnbnjWqvMfiCRcvFyCJRDmzgPHnKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDQwKQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoNjgwOSwgMzU2LCAzNjQpfQ0KICAgIGxvY2FsIHR3ZWVuID0gZ2FtZTpHZXRTZXJ2aWNlKA==')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('mKuvmsGQLurSraLjNrbIatnchTWjSqMwCrfYjjUUnHCffAHgHekOIyfKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDQwKQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoNzc0NywgMzk4LCAzNDQpfQ0KICAgIGxvY2FsIHR3ZWVuID0gZ2FtZTpHZXRTZXJ2aWNlKA==')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('wqVzSDJQGQZsMnuHnsdfuvtxUHfTIxQFhBPqbZfmsYIDWfVuuHzwTOUKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDQwKQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoODM2MiwgNDc3LCA5OTIpfQ0KICAgIGxvY2FsIHR3ZWVuID0gZ2FtZTpHZXRTZXJ2aWNlKA==')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('mBPxzcctWfRaPcpBAyAnmMnVIRxBzjQsDDxexSbsPqSFjczSBQnSOwKKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDUwKQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoODk5MywgNTk1LCAxMDMpfQ0KICAgIGxvY2FsIHR3ZWVuID0gZ2FtZTpHZXRTZXJ2aWNlKA==')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('dChPWKrbtYeNmZspiuhyrkEDmvlhQNjMYxqByLFKKabKMEBGUaYEMuFKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDQ1KQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoOTU3NiwgNTk3LCA0NCl9DQogICAgbG9jYWwgdHdlZW4gPSBnYW1lOkdldFNlcnZpY2Uo')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('NHnoPLjbrQhNGuUWVaSLCActafWvMyNbgITerNqKSRPQNyKaalTwKlEKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDMwKQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoMTAxOTQsIDU0OSwgMjEpfQ0KICAgIGxvY2FsIHR3ZWVuID0gZ2FtZTpHZXRTZXJ2aWNlKA==')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('ttDFqqDsiJpYdHvrXqpYIaxuewvKECSwMuigKDCsuOYFOuLTKcPaCFzKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDYwKQ0KICAgIGxvY2FsIHR3ZWVuSW5mbyA9IFR3ZWVuSW5mby5uZXcoMikNCiAgICBsb2NhbCBnb2FsID0ge0NGcmFtZSA9IENGcmFtZS5uZXcoMTA5OTMsIDU0OSwgMTA3KX0NCiAgICBsb2NhbCB0d2VlbiA9IGdhbWU6R2V0U2VydmljZSg=')TweenServiceMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('VyeiWHmiqpDhkczTnvccDuCKlIUZgeDQYDslAwwmoiaqgdJuhizBVlpKTpDcmVhdGUoZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LCB0d2VlbkluZm8sIGdvYWwpDQogICAgdHdlZW46UGxheSgpDQp3YWl0KDEwKQ0KZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IZWFkOkRlc3Ryb3koKQ0Kd2FpdCg1KQ0KZW5kDQplbmQpDQoNClNlY3Rpb246Q3JlYXRlVG9nZ2xlKA==')Anti Fall DamageMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('CaQtEjkwMQeKuXsWlVHzdqxczptCAXxNVTmDkeaSgmoStqYqjfpNkeaLCBmdW5jdGlvbih2YWx1ZSkNCl9HLmFudGlmYWxsID0gdmFsdWUNCndoaWxlIF9HLmFudGlmYWxsID09IHRydWUgZG8NCmdhbWU6R2V0U2VydmljZSg=')ReplicatedStorageMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('eSrRjrpBJUjPrfShqJUPGyVruSrEmkCGgeNpHMJPUaJWzEJNCFRdDzYKS5FdmVudHMuU2VydmVyRmFsbERhbWFnZTpEZXN0cm95KCkNCmVuZA0KZW5kKQ0KDQoNCg0KDQpsb2NhbCBTZWN0aW9uID0gV2luZG93Ok5ld1NlY3Rpb24o')TeleportationMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('bUfnftVdHdPsuqIfjMkIkAFYrWyFPREsQgnogejgVkJQLJoLOEdQUZrKQ0KDQpTZWN0aW9uOkNyZWF0ZURyb3Bkb3duKA==')TeleportMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('bUSPyGmdjlSYmwlVSzRKlkXevkMHNFlFQedYsgczaCIuXzjhbBeWVPELCB7')BasecampMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('bebyFYYLQOaFzADdxULQvZPqEylIoEwuWsiZZxjLuiMiTbFXGmsRBXLLCA=')Camp 1MBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('MPtsqGPmxNNGppPIvHhqRDZjUcDbSYTAfxaIIYOLxEOvwGAjhqNmzDILCA=')Camp 2MBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('TubfAzSKzrMNSJpKmynGzjIzPVkEaGnudvqvEyCgEmXJVIYBTZQDltdLCA=')Camp 3MBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('ltEnRyuAzZOOrYlbWhCqFtXFWLdqLRpYbDLiMKDduLxSrQoCmeczOjZLCA=')Camp 4MBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('mSxkfhHXdeJPvFfkIBAPGYguLTiCZqUKIQzmNISyDxDhmbLPiyVNQcZfSwgMiwgZnVuY3Rpb24oU2VsZWN0ZWRPcHRpb24pDQogICAgZ2V0Z2VudigpLlNlbGVjdGVkT3B0aW9uID0gU2VsZWN0ZWRPcHRpb24NCiAgICBkb1N0dWZmKCkNCmVuZCkNCg0KZ2V0Z2VudigpLlNlbGVjdGVkT3B0aW9uID0gbmlsDQoNCmZ1bmN0aW9uIGRvU3R1ZmYoKQ0KICAgIGlmIGdldGdlbnYoKS5TZWxlY3RlZE9wdGlvbiA9PSA=')BasecampMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('eYcllTyWrPOKLhuShTvtLJKygMUpyIvpwMApdCOSmQrMTCfnGkIYUqHIHRoZW4NCiAgICAgICAgZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LkNGcmFtZSA9IENGcmFtZS5uZXcoLTU5NzgsIC0xNTgsIC0yNykNCiAgICBlbHNlaWYgZ2V0Z2VudigpLlNlbGVjdGVkT3B0aW9uID09IA==')Camp 1MBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('wuwwSTGtrfaNRQkTACMoVVzfgYCdGlzpSNaqsYNEoUrtmeqJxNmhdjFIHRoZW4NCiAgICAgICAgZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LkNGcmFtZSA9IENGcmFtZS5uZXcoLTM3MjMsIDIyNSwgMjQzKQ0KICAgIGVsc2VpZiBnZXRnZW52KCkuU2VsZWN0ZWRPcHRpb24gPT0g')Camp 2MBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('tZMfDPxkHvOicJWJsleedqJIQgxnfueZwlMLHfMroSxHqNOnBFOOpymIHRoZW4NCiAgICAgICAgZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LkNGcmFtZSA9IENGcmFtZS5uZXcoMTc5OSwgMTA1LCAtMTQzKQ0KICAgIGVsc2VpZiBnZXRnZW52KCkuU2VsZWN0ZWRPcHRpb24gPT0g')Camp 3MBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('NxpOkYrUyRTtXWlhKrzdGJXokqOuNJhXYYsbtUmbPsNTCzNVqTeQtgiIHRoZW4NCiAgICAgICAgZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LkNGcmFtZSA9IENGcmFtZS5uZXcoNTg5OCwgMzIxLCAtMTUpDQogICAgZWxzZWlmIGdldGdlbnYoKS5TZWxlY3RlZE9wdGlvbiA9PSA=')Camp 4MBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('jhiwzcNMJAQVJkosjFazbZHJMufodNvymoDOXntFrJRiRuBgeRwbgQRIHRoZW4NCiAgICAgICAgZ2FtZS5QbGF5ZXJzLkxvY2FsUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LkNGcmFtZSA9IENGcmFtZS5uZXcoOTAwMiwgNTk2LCAxMDgpDQogICAgZW5kDQplbmQNCg0KbG9jYWwgU2VjdGlvbiA9IFdpbmRvdzpOZXdTZWN0aW9uKA==')MiscMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('SFHSMeCadVzZrtAwGljWzReDMLkyHgYtdmEJkMNIiEGSulDYyphPbEoKQ0KDQpTZWN0aW9uOkNyZWF0ZUJ1dHRvbig=')Anti AfkMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('nHIKjAPoNhYTXtpeMrimsmQgpKsaquKGcHToUECJicJgPnjaJqyPnIZLCBmdW5jdGlvbigpDQp3YWl0KDQpDQpsb2Fkc3RyaW5nKGdhbWU6SHR0cEdldCg=')https://raw.githubusercontent.com/batusz/main/roblox/__Anti__Afk__Script__MBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('KruiiUhDguseVxqegOlIftBLPExLwalJnIUEuSgcVWvOEChVMNCjAxMLCB0cnVlKSkoKQ0KZW5kKQ0KDQpTZWN0aW9uOkNyZWF0ZVRvZ2dsZSg=')Drink Water (Must Hold BottleMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('HvVvnVZdFyontXUBYtZgojBkbRKtwLrjQMsIvRzyPfsKSuYreEkdWzoLCBmdW5jdGlvbih2YWx1ZSkNCl9HLmxpZ2h0dXAgPSB2YWx1ZQ0Kd2hpbGUgX0cubGlnaHR1cCA9PSB0cnVlIGRvDQp3YWl0KDYwKQ0KZ2FtZTpHZXRTZXJ2aWNlKA==')PlayersMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('hvSypNxGwTYFaciMyScIFXZAhvZzZqkktBWHCTBDpDqQiXpztXZEqCDKS5Mb2NhbFBsYXllci5DaGFyYWN0ZXI6RmluZEZpcnN0Q2hpbGQo')Water BottleMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('sQWtKfMFdqURGFUBRqzHVQaSabZBNcRsIReOGzjiaFrwhSKrjZXzaxOKS5SZW1vdGVFdmVudDpGaXJlU2VydmVyKCkNCmVuZA0KZW5kKQ0KDQpsb2NhbCBTZWN0aW9uID0gV2luZG93Ok5ld1NlY3Rpb24o')CreditsMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('ZWrYkJwrjMOOjYiOGXfcPdoYeqTGgSUwoPorkfbfaTDNeVahvRAkBmRKQ0KDQpTZWN0aW9uOkNyZWF0ZUJ1dHRvbig=')Tiktok: reyyc.frMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('mOPbLlLOfcWgEorqnbzeUMUkNnLWuJMPLWfqOJjDSBzBUXTYTarKjphLCBmdW5jdGlvbigpDQpzZXRjbGlwYm9hcmQo')https://www.tiktok.com/@reyyc.fr?_t=8odC9VxZwwb&_r=1MBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('UfLXIYnaBByGjAdTdoznOjgBiorkgTLZQTuvZopFzjtzbSybiujHYWBKQ0KZW5kKQ0KDQpTZWN0aW9uOkNyZWF0ZUJ1dHRvbig=')Script made by RayyMBJCmKZDiPugGSMuYcVbknKYmNsOPNGbUXtOjiCDwf('msGezXhyfpgQCddtWbRFNKOOPLxnInruqgCUvlZjdOqYDAFJdhRVIzmLCBmdW5jdGlvbigpDQpwcmludCg=')No Skidding')
+-- Section - Section Usefull you don't want ok?
+
+local Section = Window:NewSection("Main")
+
+Section:CreateButton("Get All Badges", function()
+print("Clicked")
 end)
--- Wizard Ui By BloodBall    
+ 
+Section:CreateButton("Infinite Yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+wait(5)
+end)
+ 
+
+Section:CreateToggle("Auto Win (15 Mins)", function(value)
+_G.autofarm = value
+while _G.autofarm == true do
+wait(5)
+-- Basecamp
+print("Starting")
+wait(0.5)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(-5918, -159, -5)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(40)
+local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(-4858, -117, 47)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(40)
+ local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(-3720, 225, 235)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(50)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(-3187, 365, 128)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(50)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(-2290, 102, -65)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+wait(70)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(-2275, 101, -72)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(50)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(765, 65, -177)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(70)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(1788, 105, -137)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(70)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(3105, 846, -190)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(80)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(3721, 1508, -178)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(80)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(5137, 837, -189)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(90)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(5892, 321, -20)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(40)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(6809, 356, 364)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(40)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(7747, 398, 344)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(40)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(8362, 477, 992)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(50)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(8993, 595, 103)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(45)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(9576, 597, 44)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(30)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(10194, 549, 21)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(60)
+    local tweenInfo = TweenInfo.new(2)
+    local goal = {CFrame = CFrame.new(10993, 549, 107)}
+    local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, tweenInfo, goal)
+    tween:Play()
+wait(10)
+game.Players.LocalPlayer.Character.Head:Destroy()
+wait(5)
+end
+end)
+
+Section:CreateToggle("Anti Fall Damage", function(value)
+_G.antifall = value
+while _G.antifall == true do
+game:GetService("ReplicatedStorage").Events.ServerFallDamage:Destroy()
+end
+end)
+
+
+
+
+local Section = Window:NewSection("Teleportation")
+
+Section:CreateDropdown("Teleport", {"Basecamp", "Camp 1", "Camp 2", "Camp 3", "Camp 4"}, 2, function(SelectedOption)
+    getgenv().SelectedOption = SelectedOption
+    doStuff()
+end)
+
+getgenv().SelectedOption = nil
+
+function doStuff()
+    if getgenv().SelectedOption == "Basecamp" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5978, -158, -27)
+    elseif getgenv().SelectedOption == "Camp 1" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3723, 225, 243)
+    elseif getgenv().SelectedOption == "Camp 2" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1799, 105, -143)
+    elseif getgenv().SelectedOption == "Camp 3" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5898, 321, -15)
+    elseif getgenv().SelectedOption == "Camp 4" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9002, 596, 108)
+    end
+end
+
+local Section = Window:NewSection("Misc")
+
+Section:CreateButton("Anti Afk", function()
+wait(4)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/main/roblox/__Anti__Afk__Script__", true))()
+end)
+
+Section:CreateToggle("Drink Water (Must Hold Bottle", function(value)
+_G.lightup = value
+while _G.lightup == true do
+wait(60)
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Water Bottle").RemoteEvent:FireServer()
+end
+end)
+
+local Section = Window:NewSection("Credits")
+
+Section:CreateButton("Tiktok: reyyc.fr", function()
+setclipboard("https://www.tiktok.com/@reyyc.fr?_t=8odC9VxZwwb&_r=1")
+end)
+
+Section:CreateButton("Script made by Rayy", function()
+print("No Skidding")
+end)
+-- Wizard Ui By BloodBall
