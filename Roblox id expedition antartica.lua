@@ -142,6 +142,11 @@ Window:AddToggle({
 	Callback = function(Boolean) 
 		warn(Boolean);
 	end,
+		while task.wait() do
+game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_net@0.2.0").net:FindFirstChild("RF/ChargeFishingRod"):InvokeServer(workspace:GetServerTimeNow())
+game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_net@0.2.0").net:FindFirstChild("RF/RequestFishingMinigameStarted"):InvokeServer(-1.2379989624023438,1)
+game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_net@0.2.0").net:FindFirstChild("RE/FishingCompleted"):FireServer()
+end
 }) 
 
 Window:AddInput({
@@ -216,11 +221,6 @@ Window:AddToggle({
 	Callback = function(Boolean) 
 		Window:SetSetting("Blur", Boolean)
 	end,
-  while task.wait() do
-game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_net@0.2.0").net:FindFirstChild("RF/ChargeFishingRod"):InvokeServer(workspace:GetServerTimeNow())
-game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_net@0.2.0").net:FindFirstChild("RF/RequestFishingMinigameStarted"):InvokeServer(-1.2379989624023438,1)
-game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_net@0.2.0").net:FindFirstChild("RE/FishingCompleted"):FireServer()
-end
 }) 
 
 
