@@ -1,89 +1,249 @@
- 
-local autofarm = game.Players.LocalPlayer.Character.HumanoidRootPart
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+--// Services
+local UserInputService = game:GetService("UserInputService");
 
-local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
- 
--- Window or baseplate Make tab or section
+--// Library
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/lxte/lates-lib/main/Main.lua"))()
+local Window = Library:CreateWindow({
+	Title = "???",
+	Theme = "Dark",
+	
+	Size = UDim2.fromOffset(570, 370),
+	Transparency = 0.2,
+	Blurring = true,
+	MinimizeKeybind = Enum.KeyCode.LeftAlt,
+})
 
-local Window = Library:NewWindow("Fish It")
- 
--- Section - Section Usefull you don't want ok?
+local Themes = {
+	Light = {
+		--// Frames:
+		Primary = Color3.fromRGB(232, 232, 232),
+		Secondary = Color3.fromRGB(255, 255, 255),
+		Component = Color3.fromRGB(245, 245, 245),
+		Interactables = Color3.fromRGB(235, 235, 235),
 
-local Section = Window:NewSection("Main")
+		--// Text:
+		Tab = Color3.fromRGB(50, 50, 50),
+		Title = Color3.fromRGB(0, 0, 0),
+		Description = Color3.fromRGB(100, 100, 100),
 
-Section:CreateButton("Infinite Yield", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-wait(5)
-end)
- 
+		--// Outlines:
+		Shadow = Color3.fromRGB(255, 255, 255),
+		Outline = Color3.fromRGB(210, 210, 210),
 
-Section:CreateToggle("Instant Catch", function(value)
-_G.autofarm = value
-while _G.autofarm == true do
-Section:CreateToggle("Instant Catch", function(value)
-_G.autofarm = value
-while _G.autofarm == true do
-while task.wait() do
+		--// Image:
+		Icon = Color3.fromRGB(100, 100, 100),
+	},
+	
+	Dark = {
+		--// Frames:
+		Primary = Color3.fromRGB(30, 30, 30),
+		Secondary = Color3.fromRGB(35, 35, 35),
+		Component = Color3.fromRGB(40, 40, 40),
+		Interactables = Color3.fromRGB(45, 45, 45),
+
+		--// Text:
+		Tab = Color3.fromRGB(200, 200, 200),
+		Title = Color3.fromRGB(240,240,240),
+		Description = Color3.fromRGB(200,200,200),
+
+		--// Outlines:
+		Shadow = Color3.fromRGB(0, 0, 0),
+		Outline = Color3.fromRGB(40, 40, 40),
+
+		--// Image:
+		Icon = Color3.fromRGB(220, 220, 220),
+	},
+	
+	Void = {
+		--// Frames:
+		Primary = Color3.fromRGB(15, 15, 15),
+		Secondary = Color3.fromRGB(20, 20, 20),
+		Component = Color3.fromRGB(25, 25, 25),
+		Interactables = Color3.fromRGB(30, 30, 30),
+
+		--// Text:
+		Tab = Color3.fromRGB(200, 200, 200),
+		Title = Color3.fromRGB(240,240,240),
+		Description = Color3.fromRGB(200,200,200),
+
+		--// Outlines:
+		Shadow = Color3.fromRGB(0, 0, 0),
+		Outline = Color3.fromRGB(40, 40, 40),
+
+		--// Image:
+		Icon = Color3.fromRGB(220, 220, 220),
+	},
+
+}
+
+--// Set the default theme
+Window:SetTheme(Themes.Dark)
+
+--// Sections
+Window:AddTabSection({
+	Name = "Main",
+	Order = 1,
+})
+
+Window:AddTabSection({
+	Name = "Settings",
+	Order = 2,
+})
+
+--// Tab [MAIN]
+
+local Main = Window:AddTab({
+	Title = "Components",
+	Section = "Main",
+	Icon = "rbxassetid://11963373994"
+})
+
+Window:AddSection({ Name = "Non Interactable", Tab = Main }) 
+
+
+Window:AddParagraph({
+	Title = "Paragraph",
+	Description = "Insert any important text here.",
+	Tab = Main
+}) 
+
+Window:AddSection({ Name = "Interactable", Tab = Main }) 
+
+Window:AddButton({
+	Title = "Button",
+	Description = "I wonder what this does",
+	Tab = Main,
+	Callback = function() 
+		Window:Notify({
+			Title = "hi",
+			Description = "i'm a notification", 
+			Duration = 5
+		})
+	end,
+}) 
+
+Window:AddSlider({
+	Title = "Slider",
+	Description = "Sliding",
+	Tab = Main,
+	MaxValue = 100,
+	Callback = function(Amount) 
+		warn(Amount);
+	end,
+}) 
+
+Window:AddToggle({
+	Title = "Toggle",
+	Description = "Switching",
+	Tab = Main,
+	Callback = function(Boolean) 
+		warn(Boolean);
+	end,
+}) 
+
+Window:AddInput({
+	Title = "Input",
+	Description = "Typing",
+	Tab = Main,
+	Callback = function(Text) 
+		warn(Text);
+	end,
+}) 
+
+
+Window:AddDropdown({
+	Title = "Dropdown",
+	Description = "Selecting",
+	Tab = Main,
+	Options = {
+		["An Option"] = "hi",
+		["And another"] = "hi",
+		["Another"] = "hi",
+	},
+	Callback = function(Number) 
+		warn(Number);
+	end,
+}) 
+
+Window:AddKeybind({
+	Title = "Keybind",
+	Description = "Binding",
+	Tab = Main,
+	Callback = function(Key) 
+		warn("Key Set")
+	end,
+}) 
+
+--// Tab [SETTINGS]
+local Keybind = nil
+local Settings = Window:AddTab({
+	Title = "Settings",
+	Section = "Settings",
+	Icon = "rbxassetid://11293977610",
+})
+
+Window:AddKeybind({
+	Title = "Minimize Keybind",
+	Description = "Set the keybind for Minimizing",
+	Tab = Settings,
+	Callback = function(Key) 
+		Window:SetSetting("Keybind", Key)
+	end,
+}) 
+
+Window:AddDropdown({
+	Title = "Set Theme",
+	Description = "Set the theme of the library!",
+	Tab = Settings,
+	Options = {
+		["Light Mode"] = "Light",
+		["Dark Mode"] = "Dark",
+		["Extra Dark"] = "Void",
+	},
+	Callback = function(Theme) 
+		Window:SetTheme(Themes[Theme])
+	end,
+}) 
+
+Window:AddToggle({
+	Title = "UI Blur",
+	Description = "If enabled, must have your Roblox graphics set to 8+ for it to work",
+	Default = true,
+	Tab = Settings,
+	Callback = function(Boolean) 
+		Window:SetSetting("Blur", Boolean)
+	end,
+  while task.wait() do
 game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_net@0.2.0").net:FindFirstChild("RF/ChargeFishingRod"):InvokeServer(workspace:GetServerTimeNow())
 game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_net@0.2.0").net:FindFirstChild("RF/RequestFishingMinigameStarted"):InvokeServer(-1.2379989624023438,1)
 game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_net@0.2.0").net:FindFirstChild("RE/FishingCompleted"):FireServer()
 end
+}) 
 
-Section:CreateToggle("Anti Fall Damage", function(value)
-_G.antifall = value
-while _G.antifall == true do
-game:GetService("ReplicatedStorage").Events.ServerFallDamage:Destroy()
-end
+
+Window:AddSlider({
+	Title = "UI Transparency",
+	Description = "Set the transparency of the UI",
+	Tab = Settings,
+	AllowDecimals = true,
+	MaxValue = 1,
+	Callback = function(Amount) 
+		Window:SetSetting("Transparency", Amount)
+	end,
+}) 
+
+Window:Notify({
+	Title = "Hello World!",
+	Description = "Press Left Alt to Minimize and Open the tab!", 
+	Duration = 10
+})
+
+--// Keybind Example
+UserInputService.InputBegan:Connect(function(Key) 
+	if Key == Keybind then
+		warn("You have pressed the minimize keybind!");
+	end
 end)
-
-
-
-
-local Section = Window:NewSection("Teleportation")
-
-Section:CreateDropdown("Teleport", {"Basecamp", "Camp 1", "Camp 2", "Camp 3", "Camp 4"}, 2, function(SelectedOption)
-    getgenv().SelectedOption = SelectedOption
-    doStuff()
-end)
-
-getgenv().SelectedOption = nil
-
-function doStuff()
-    if getgenv().SelectedOption == "Basecamp" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5978, -158, -27)
-    elseif getgenv().SelectedOption == "Camp 1" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3723, 225, 243)
-    elseif getgenv().SelectedOption == "Camp 2" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1799, 105, -143)
-    elseif getgenv().SelectedOption == "Camp 3" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5898, 321, -15)
-    elseif getgenv().SelectedOption == "Camp 4" then
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9002, 596, 108)
-    end
-end
-
-local Section = Window:NewSection("Misc")
-
-Section:CreateButton("Anti Afk", function()
-wait(4)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/batusz/main/roblox/__Anti__Afk__Script__", true))()
-end)
-
-Section:CreateToggle("Drink Water (Must Hold Bottle", function(value)
-_G.lightup = value
-while _G.lightup == true do
-wait(60)
-game:GetService("Players").LocalPlayer.Character:FindFirstChild("Water Bottle").RemoteEvent:FireServer()
-end
-end)
-
-local Section = Window:NewSection("Credits")
-
-Section:CreateButton("Tiktok: reyyc.fr", function()
-setclipboard("https://www.tiktok.com/@reyyc.fr?_t=8odC9VxZwwb&_r=1")
-end)
-
-Section:CreateButton("Script made by Rayy", function()
-print("No Skidding")
-end)
--- Wizard Ui By BloodBall
